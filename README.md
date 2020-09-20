@@ -30,6 +30,19 @@ $ npm run watch:server
 
 <br>
 
+### Insert JSON Data
+
+```json
+{
+  "firstName": "John",
+  "lastName": "Doe",
+  "userName": "JohnDoe",
+  "id": 123
+}
+```
+
+<br>
+
 # Folder Structure
 
 ```javascript
