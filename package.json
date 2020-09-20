@@ -1,0 +1,16 @@
+{
+  "name": "hapi-mongodb",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "watch:server": "nodemon server.js"
+  },
+  "author": "Bartlomiej Figatowski",
+  "license": "ISC",
+  "dependencies": {
+    "@hapi/hapi": "^20.0.0",
+    "dotenv": "^8.2.0",
+    "mongodb": "^3.6.2"
+  }
+}
