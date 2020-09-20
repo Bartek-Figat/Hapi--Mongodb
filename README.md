@@ -1,3 +1,5 @@
+[![CodeFactor](https://www.codefactor.io/repository/github/bartek-figat/hapi--mongodb/badge)](https://www.codefactor.io/repository/github/bartek-figat/hapi--mongodb)
+
 <h1 align="center"> Hapi-Mongodb </h1> <br>
 
 ## Installation
