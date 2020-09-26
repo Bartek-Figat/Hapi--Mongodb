@@ -34,15 +34,6 @@ $ npm run watch:server
 
 ### Insert JSON Data
 
-```json
-{
-  "firstName": "John",
-  "lastName": "Doe",
-  "userName": "JohnDoe",
-  "id": 123
-}
-```
-
 <br>
 
 # Folder Structure
@@ -74,4 +65,77 @@ app
 ├──  server.js                  # Index (your server starts here)
 
 
+```
+
+```json
+  {
+
+    "isActive": true,
+    "age": 38,
+    "eyeColor": "green",
+    "company": "ZENTIME"
+  },
+  {
+
+    "isActive": false,
+    "age": 26,
+    "eyeColor": "brown",
+    "company": "EXOTERIC"
+  },
+  {
+
+    "isActive": false,
+    "age": 26,
+    "eyeColor": "green",
+    "company": "ZIPAK"
+  },
+  {
+
+    "isActive": true,
+    "age": 25,
+    "eyeColor": "brown",
+    "company": "REMOTION"
+  },
+  {
+
+    "isActive": false,
+    "age": 29,
+    "eyeColor": "brown",
+    "company": "COWTOWN"
+  },
+  {
+
+    "isActive": false,
+    "age": 22,
+    "eyeColor": "brown",
+    "company": "OVATION"
+  },
+  {
+
+    "isActive": true,
+    "age": 25,
+    "eyeColor": "green",
+    "company": "PHEAST"
+  },
+  {
+
+    "isActive": true,
+    "age": 23,
+    "eyeColor": "blue",
+    "company": "GRONK"
+  },
+  {
+
+    "isActive": false,
+    "age": 30,
+    "eyeColor": "green",
+    "company": "GEOLOGIX"
+  },
+  {
+
+    "isActive": true,
+    "age": 23,
+    "eyeColor": "brown",
+    "company": "RONELON"
+  },
 ```

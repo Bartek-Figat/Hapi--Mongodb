@@ -1,5 +1,5 @@
 require("dotenv").config();
-const { MongoClient } = require("mongodb");
+const { MongoClient, Logger } = require("mongodb");
 
 const { dbURI } = process.env;
 
@@ -13,7 +13,7 @@ const insertUser = async (doc) => {
   try {
     await client.connect();
     const database = client.db("test");
-    const collection = database.collection("users");
+    const collection = database.collection("new_collection");
     return await collection.insertOne(doc);
   } catch (error) {
     console.log(error);
@@ -27,7 +27,7 @@ const insertManyUsers = async (docs) => {
   try {
     await client.connect();
     const database = client.db("test");
-    const collection = database.collection("users");
+    const collection = database.collection("new_collection");
     return await collection.insertMany(docs);
   } catch (error) {
     console.log(error);
@@ -41,7 +41,7 @@ const findOneUser = async (query) => {
   try {
     await client.connect();
     const database = client.db("test");
-    const collection = database.collection("users");
+    const collection = database.collection("new_collection");
     return await collection.findOne(query);
   } catch (error) {
     console.log(error);
@@ -55,12 +55,10 @@ const findAllUsers = async (query, options) => {
   try {
     await client.connect();
     const database = client.db("test");
-    const collection = database.collection("users");
-    return await collection.find(query, options);
+    const collection = database.collection("new_collection");
+    return collection.find(query, options).toArray();
   } catch (error) {
     console.log(error);
-  } finally {
-    await client.close();
   }
 };
 
@@ -69,7 +67,7 @@ const updateOneUsers = async (filter, options, updateDoc) => {
   try {
     await client.connect();
     const database = client.db("test");
-    const collection = database.collection("users");
+    const collection = database.collection("new_collection");
     return await collection.updateOne(filter, options, updateDoc);
   } catch (error) {
     console.log(error);
@@ -83,7 +81,7 @@ const updateManyUsers = async (filter, updateDoc) => {
   try {
     await client.connect();
     const database = client.db("test");
-    const collection = database.collection("users");
+    const collection = database.collection("new_collection");
     return await collection.updateOne(filter, updateDoc);
   } catch (error) {
     console.log(error);
@@ -97,7 +95,7 @@ const replaceOneUsers = async (query, replacement, options) => {
   try {
     await client.connect();
     const database = client.db("test");
-    const collection = database.collection("users");
+    const collection = database.collection("new_collection");
     return await collection.updateOne(query, replacement, options);
   } catch (error) {
     console.log(error);
@@ -111,7 +109,7 @@ const deleteOneUser = async (query) => {
   try {
     await client.connect();
     const database = client.db("test");
-    const collection = database.collection("users");
+    const collection = database.collection("new_collection");
     return await collection.deleteOne(query);
   } catch (error) {
     console.log(error);
@@ -125,7 +123,7 @@ const deleteManyUser = async (query) => {
   try {
     await client.connect();
     const database = client.db("test");
-    const collection = database.collection("users");
+    const collection = database.collection("new_collection");
     return await collection.deleteMany(query);
   } catch (error) {
     console.log(error);

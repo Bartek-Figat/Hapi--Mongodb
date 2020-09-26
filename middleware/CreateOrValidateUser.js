@@ -4,22 +4,22 @@ const { User } = require("../models/models.schema");
 
 const CreateOrValidate = async (request, h) => {
   const constraints = {
-    firstName: {
+    isActive: {
       presence: {
         allowEmpty: false,
       },
     },
-    lastName: {
+    age: {
       presence: {
         allowEmpty: false,
       },
     },
-    userName: {
+    eyeColor: {
       presence: {
         allowEmpty: false,
       },
     },
-    id: {
+    company: {
       presence: {
         allowEmpty: false,
       },
@@ -28,8 +28,8 @@ const CreateOrValidate = async (request, h) => {
   const dataValidate = await validate(request.payload, constraints);
   try {
     if (dataValidate) return h.response(dataValidate);
-    const { firstName, lastName, userName, id } = request.payload;
-    const user = new User(firstName, lastName, userName, id);
+    const { isActive, age, eyeColor, company } = request.payload;
+    const user = new User(isActive, age, eyeColor, company);
     await insertUser(user);
     return h.response(200);
   } catch (error) {
