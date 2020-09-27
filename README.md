@@ -25,10 +25,11 @@ $ npm run watch:server
 <br>
 <h3 align=""> API </h3> <br>
 
-| Function name | Description |
-| ------------- | ----------- |
-| `get()`       | "/"         |
-| `post()`      | "/post"     |
+| Function name | Description   |
+| ------------- | ------------- |
+| `get()`       | "/"           |
+| `post()`      | "/post"       |
+| `get()`       | "/pagination" |
 
 <br>
 
