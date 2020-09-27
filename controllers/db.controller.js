@@ -56,7 +56,21 @@ const findAllUsers = async (query, options) => {
     await client.connect();
     const database = client.db("test");
     const collection = database.collection("new_collection");
-    return collection.find(query, options).toArray();
+    return collection.find(query, options).limit(3).toArray();
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+const userPagination = async (query, options, pagination) => {
+  const { limit, skip } = pagination;
+
+  const client = new MongoClient(dbURI, dbOptions);
+  try {
+    await client.connect();
+    const database = client.db("test");
+    const collection = database.collection("new_collection");
+    return collection.find(query, options).skip(skip).limit(limit).toArray();
   } catch (error) {
     console.log(error);
   }
@@ -142,4 +156,5 @@ module.exports = {
   replaceOneUsers,
   deleteOneUser,
   deleteManyUser,
+  userPagination,
 };
