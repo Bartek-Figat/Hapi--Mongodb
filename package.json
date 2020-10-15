@@ -9,7 +9,7 @@
   "author": "Bartlomiej Figatowski",
   "license": "ISC",
   "dependencies": {
-    "@hapi/hapi": "^20.0.0",
+    "@hapi/hapi": "^20.0.1",
     "dotenv": "^8.2.0",
     "hapi-alive": "^2.0.4",
     "mongodb": "^3.6.2",
