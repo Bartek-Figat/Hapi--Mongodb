@@ -10,7 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "@hapi/hapi": "^20.0.0",
-    "dotenv": "^8.2.0",
+    "dotenv": "^8.6.0",
     "hapi-alive": "^2.0.4",
     "mongodb": "^3.6.2",
     "validate.js": "^0.13.1"
